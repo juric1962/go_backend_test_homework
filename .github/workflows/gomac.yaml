@@ -37,12 +37,13 @@ jobs:
       # Этот шаг просто выполняет команду 'go build -v ./...'
       run: go build -v ./...
 
-   # Шаг с именем "Test"
+ # Шаг с именем "Test"
     - name: Test
       env:
-        mascot: Tux
+        MY_VAR: Hi there! My name is
       # Этот шаг выполняет команду 'go test -v ./...'
       run: |
         go test -v ./...
-        echo ${{mascot}}
+        echo $MY_VAR
+      
       
