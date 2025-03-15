@@ -46,4 +46,5 @@ jobs:
       run: |
         go test -v ./...
         echo 'Hi ${{ env.mascot }}' 
+        echo 'Hi ${{ env.mascot }}' 
      
