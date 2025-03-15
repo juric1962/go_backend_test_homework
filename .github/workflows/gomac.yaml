@@ -43,4 +43,5 @@ jobs:
         mascot: Tux
       # Этот шаг выполняет команду 'go test -v ./...'
       run: go test -v ./...
+      run: echo "hi ${{mascot}}"
       
