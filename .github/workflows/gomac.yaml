@@ -52,6 +52,6 @@ jobs:
       run: |
         go test -v ./...
         echo $MY_VAR
-        echo The username is ${{ inputs.username }}
+        echo The username is ${{ github.ref }}
       
       
