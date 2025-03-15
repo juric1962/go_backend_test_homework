@@ -44,5 +44,5 @@ jobs:
       # Этот шаг выполняет команду 'go test -v ./...'
       run: |
         go test -v ./...
-        echo "hi ${{mascot}}"
+        echo ${{mascot}}
       
