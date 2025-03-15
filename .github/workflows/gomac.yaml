@@ -11,7 +11,13 @@ on:
   pull_request:
     # Указывает, что нужно запускать рабочий процесс, только если событие относится к ветке main
     branches: [ "mac" ]
-
+  workflow_call:
+    inputs:
+      username:
+        description: 'A username passed from the caller workflow'
+        default: 'john-doe'
+        required: false
+        type: string
 # Задания
 jobs:
   # Задание с идентификатором "build"
@@ -45,5 +51,6 @@ jobs:
       run: |
         go test -v ./...
         echo $MY_VAR
+        echo The username is ${{ inputs.username }}
       
       
