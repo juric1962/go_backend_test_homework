@@ -53,5 +53,9 @@ jobs:
         go test -v ./...
         echo $MY_VAR
         echo The username is ${{ github.ref }}
+    - name: Dump strategy context
+      env:
+        STRATEGY_CONTEXT: ${{ toJson(input) }}
+      run: echo "$STRATEGY_CONTEXT"
       
       
