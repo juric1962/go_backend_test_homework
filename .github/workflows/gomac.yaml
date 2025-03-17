@@ -55,7 +55,7 @@ jobs:
         echo The username is ${{ github.ref }}
     - name: Dump strategy context
       env:
-        STRATEGY_CONTEXT: ${{ toJson(inputs) }}
+        STRATEGY_CONTEXT: ${{ toJson(runner) }}
       run: echo "$STRATEGY_CONTEXT"
       
       
