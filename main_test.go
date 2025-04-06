@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+
 var (
 	requiredFiles = []string{"README.md", "main.go", "main_test.go", "go.mod"}
 )
